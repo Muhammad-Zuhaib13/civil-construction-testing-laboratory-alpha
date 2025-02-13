@@ -31,14 +31,14 @@ export function FooterComp() {
                 <div>
                   <Footer.Title title="about" />
                   <Footer.LinkGroup col>
-                    <Footer.Link href="/">Tailwind CSS</Footer.Link>
+                    <Footer.Link href="/">Home</Footer.Link>
                   </Footer.LinkGroup>
                 </div>
                 <div>
                   <Footer.Title title="Follow us" />
                   <Footer.LinkGroup col>
-                    <Footer.Link href="/">Github</Footer.Link>
-                    <Footer.Link href="/">Discord</Footer.Link>
+                    <Footer.Link href="/">Home</Footer.Link>
+                    <Footer.Link href="/">Home</Footer.Link>
                   </Footer.LinkGroup>
                 </div>
                 <div>
