@@ -1,6 +1,10 @@
 import ScreenContainer from "./ScreenContainer";
-import NavbarHeader from "./NavbarHeader"
+import NavbarComp from "./Navbar";
+import TextWithImg from "./TextWithImg";
+import { FooterComp } from "./Footer";
 export {
     ScreenContainer,
-    NavbarHeader,
+    NavbarComp,
+    TextWithImg,
+    FooterComp,
 }

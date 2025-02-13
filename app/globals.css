@@ -5,6 +5,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --mainHeadingSize: 40px;
+  --mainHeadingLineHeight: 46px;
+  --subHeadingFontSize: 24px;
+  --subHeadingLineHeight: 32px;
+  --contentFontSize: 18px;
+  --contentLineHeight: 26px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,7 +19,35 @@
     --foreground: #ededed;
   }
 }
-
+@media only screen and (max-width: 1023px) {
+  :root {
+    --mainHeadingSize: 32px;
+    --mainHeadingLineHeight: 32px;
+    --subHeadingFontSize: 20px;
+    --contentFontSize: 16px;
+    --contentLineHeight: 24px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  :root {
+    --mainHeadingSize: 20px;
+    --mainHeadingLineHeight: 26px;
+    --subHeadingLineHeight: 22px;
+    --subHeadingFontSize: 16px;
+    --contentFontSize: 14px;
+    --contentLineHeight: 22px;
+  }
+}
+.mainHeading{
+  font-size: var(--mainHeadingSize);
+  line-height: var(--mainHeadingLineHeight);
+  font-weight: 600;
+}
+.sub-heading{
+  font-size: var(--subHeadingFontSize);
+  line-height: var(--subHeadingLineHeight);
+  font-weight: 500;
+}
 body {
   color: var(--foreground);
   background: var(--background);
