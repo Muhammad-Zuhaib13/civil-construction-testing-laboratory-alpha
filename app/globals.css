@@ -38,6 +38,11 @@
     --contentLineHeight: 22px;
   }
 }
+.header
+  {
+    box-shadow: 2px 15px 15px #0000000d;
+}
+
 .mainHeading{
   font-size: var(--mainHeadingSize);
   line-height: var(--mainHeadingLineHeight);

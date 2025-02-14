@@ -12,7 +12,7 @@ import ScreenContainer from "./ScreenContainer";
 
 export function FooterComp() {
   return (
-    <div className="dark:bg-slate-800 bg-slate-200">
+    <div className="dark:bg-slate-800 bg-slate-100">
       <ScreenContainer>
         <Footer
           container
@@ -20,14 +20,14 @@ export function FooterComp() {
         >
           <div className="w-full">
             <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-              <div>
+              <div className="md:block hidden">
                 <img
                   src="/assets/icons/Logo-CCTL.png"
                   className="mr-3 h-[75px] w-[80px]"
                   alt="Flowbite Logo"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:mt-4 md:grid-cols-3 sm:gap-6">
                 <div>
                   <Footer.Title title="about" />
                   <Footer.LinkGroup col>
@@ -38,7 +38,7 @@ export function FooterComp() {
                   <Footer.Title title="Follow us" />
                   <Footer.LinkGroup col>
                     <Footer.Link href="/">Home</Footer.Link>
-                    <Footer.Link href="/">Home</Footer.Link>
+                    {/* <Footer.Link href="/">Home</Footer.Link> */}
                   </Footer.LinkGroup>
                 </div>
                 <div>
