@@ -13,11 +13,9 @@ export default function DrawerComp() {
   return (
     <>
       <div className="flex items-center justify-center">
-        <ScreenContainer>
-          <Button onClick={() => setIsOpen(true)}>
-            <MenuOpenIcon />
-          </Button>
-        </ScreenContainer>
+        <Button onClick={() => setIsOpen(true)}>
+          <MenuOpenIcon />
+        </Button>
       </div>
       <Drawer open={isOpen} onClose={handleClose}>
         <Drawer.Header title="" titleIcon={() => <></>} />
