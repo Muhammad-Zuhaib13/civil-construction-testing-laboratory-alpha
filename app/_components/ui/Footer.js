@@ -10,7 +10,7 @@ import {
 } from "react-icons/bs";
 import ScreenContainer from "./ScreenContainer";
 
-export function FooterComp() {
+export default function FooterComp() {
   return (
     <div className="dark:bg-slate-800 bg-slate-100">
       <ScreenContainer>

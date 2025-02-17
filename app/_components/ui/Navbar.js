@@ -1,39 +1,137 @@
 "use client";
-import React from "react";
-import { Navbar, Flowbite, DarkThemeToggle } from "flowbite-react";
+import React, { useRef, useState, useEffect } from "react";
+import { Navbar, Flowbite, DarkThemeToggle, Dropdown } from "flowbite-react";
 import ScreenContainer from "./ScreenContainer";
+import Link from "next/link";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import DrawerComp from "./DrawerComp";
 const NavbarComp = () => {
+  const dropdownContainerRef = useRef(null); // Reference for the dropdown container (li)
+  const dropdownMenuRef = useRef(null); // Reference for the dropdown menu (ul)
+  const [isOpen, setIsOpen] = useState(false); // Track the dropdown's open/close state
+
+  const toggleDropdown = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownContainerRef.current &&
+        !dropdownContainerRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("click", handleClickOutside);
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="bg-slate-100 dark:bg-slate-800 sticky left-0 right-0 top-[-1px] z-50 header">
-      <ScreenContainer>
-        <Navbar className="bg-inherit flex-nowrap px-0 sm:px-0 relative">
-          <Navbar.Brand href="/">
-            <img
-              src="/assets/icons/Logo-CCTL.png"
-              className="mr-3 h-[75px] w-[80px]"
-              alt="Flowbite Logo"
-            />
-            <span className="self-center sub-heading font-semibold dark:text-white lg:block hidden">
-              Civil Construction Testing Laboratory
-            </span>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-          <Navbar.Collapse>
-            <Navbar.Link href="/navbars" active>
-              Home
-            </Navbar.Link>
-            <Navbar.Link href="/">About</Navbar.Link>
-            <Navbar.Link href="/">Services</Navbar.Link>
-            <Navbar.Link href="/">Pricing</Navbar.Link>
-            <Navbar.Link href="/">Contact</Navbar.Link>
-          </Navbar.Collapse>
-          <div className="flex fixed right-[20px] bottom-[20px]">
-            <Flowbite>
-              <DarkThemeToggle />
-            </Flowbite>
-          </div>
-        </Navbar>
-      </ScreenContainer>
+    <div>
+      <div className="bg-slate-100 dark:bg-slate-800 sticky left-0 right-0 top-[-1px] z-50 header">
+        <ScreenContainer>
+          <nav className="flex flex-row items-center justify-between py-2.5">
+            <Link
+              className="mr-3 flex justify-center items-center  shrink-0"
+              href="/"
+            >
+              <img
+                src="/assets/icons/Logo-CCTL.png"
+                className="h-[75px] w-[80px]"
+                alt="Flowbite Logo"
+              />
+              <span className="self-center sub-heading font-semibold dark:text-white lg:block hidden">
+                Civil Construction Testing Laboratory
+              </span>
+            </Link>
+            <div className="md:flex items-center hidden gap-2">
+              <ul className="flex  flex-row md:space-x-8 md:text-sm md:font-medium">
+                <li>
+                  <Link
+                    href="/"
+                    className="block py-2 pl-3 pr-4 md:p-0  dark:text-white text-cyan-700"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
+                  >
+                    Careers
+                  </Link>
+                </li>
+                <li ref={dropdownContainerRef} className="relative">
+                  <span
+                    className="py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700 flex flex-row gap-1"
+                    onClick={toggleDropdown}
+                  >
+                    <span>Services</span>
+                    <ExpandMoreIcon />
+                  </span>
+                  <ul
+                    ref={dropdownMenuRef}
+                    className={`absolute right-0 bg-white w-[210px] p-2 rounded-sm shadow-sm transition-all duration-300 ease-in-out ${
+                      isOpen ? "block" : "hidden"
+                    }`}
+                  >
+                    <li>
+                      <Link
+                        href="/"
+                        className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                      >
+                        Material & Lab Testing Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/"
+                        className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                      >
+                        Mix Design
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/"
+                        className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                      >
+                        Civil Engineering
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/"
+                        className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                      >
+                        Road & Commercial Construction
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <Flowbite>
+                <DarkThemeToggle />
+              </Flowbite>
+            </div>
+            <div className="md:hidden block">
+              <DrawerComp />
+            </div>
+          </nav>
+        </ScreenContainer>
+      </div>
     </div>
   );
 };

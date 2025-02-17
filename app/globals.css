@@ -38,20 +38,34 @@
     --contentLineHeight: 22px;
   }
 }
-.header
-  {
-    box-shadow: 2px 15px 15px #0000000d;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+.header {
+  box-shadow: 2px 15px 15px #0000000d;
 }
 
-.mainHeading{
+.mainHeading {
   font-size: var(--mainHeadingSize);
   line-height: var(--mainHeadingLineHeight);
   font-weight: 600;
 }
-.sub-heading{
+.sub-heading {
   font-size: var(--subHeadingFontSize);
   line-height: var(--subHeadingLineHeight);
   font-weight: 500;
+}
+
+.paragraph {
+  font-size: var(--contentFontSize);
+  line-height: var(--contentLineHeight);
+  font-weight: 400;
 }
 body {
   color: var(--foreground);
