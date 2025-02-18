@@ -12,12 +12,12 @@ export default function DrawerComp() {
 
   return (
     <>
-      <div className="flex items-center justify-center">
-        <Button onClick={() => setIsOpen(true)}>
+      <div className="flex items-center justify-center ">
+        <Button onClick={() => setIsOpen(true)} className="bg-[#FDF6F6] dark:bg-slate-400 text-black dark:text-white">
           <MenuOpenIcon />
         </Button>
       </div>
-      <Drawer open={isOpen} onClose={handleClose}>
+      <Drawer open={isOpen} onClose={handleClose} className="!bg-slate-400">
         <ScreenContainer>
           <Drawer.Header title="" titleIcon={() => <></>} />
           <Drawer.Items>
@@ -26,6 +26,7 @@ export default function DrawerComp() {
                 <Link
                   href="/"
                   className="block py-2 pl-3 pr-4 md:p-0  dark:text-white text-cyan-700"
+                  onClick={handleClose}
                 >
                   Home
                 </Link>
@@ -34,14 +35,24 @@ export default function DrawerComp() {
                 <Link
                   href="/about"
                   className="block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
+                  onClick={handleClose}
                 >
                   About
+                </Link>
+              </li> <li>
+                <Link
+                  href="/contact"
+                  className="block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
+                  onClick={handleClose}
+                >
+                  Contact Us
                 </Link>
               </li>
               <li>
                 <Link
                   href="/careers"
                   className="block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
+                  onClick={handleClose}
                 >
                   Careers
                 </Link>
@@ -50,6 +61,7 @@ export default function DrawerComp() {
                 <Link
                   href="/material-and-lab-testing"
                   className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                  onClick={handleClose}
                 >
                   Material & Lab Testing Services
                 </Link>
@@ -58,6 +70,7 @@ export default function DrawerComp() {
                 <Link
                   href="/mix-design"
                   className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                  onClick={handleClose}
                 >
                   Mix Design
                 </Link>
@@ -66,6 +79,7 @@ export default function DrawerComp() {
                 <Link
                   href="/civil-engineering"
                   className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                  onClick={handleClose}
                 >
                   Civil Engineering
                 </Link>
@@ -74,6 +88,7 @@ export default function DrawerComp() {
                 <Link
                   href="/road-and-commercial-construction"
                   className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                  onClick={handleClose}
                 >
                   Road & Commercial Construction
                 </Link>
