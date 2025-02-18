@@ -32,7 +32,7 @@ export default function DrawerComp() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/about"
                   className="block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
                 >
                   About
@@ -40,7 +40,7 @@ export default function DrawerComp() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/careers"
                   className="block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
                 >
                   Careers
@@ -48,7 +48,7 @@ export default function DrawerComp() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/material-and-lab-testing"
                   className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
                 >
                   Material & Lab Testing Services
@@ -56,7 +56,7 @@ export default function DrawerComp() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/mix-design"
                   className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
                 >
                   Mix Design
@@ -64,7 +64,7 @@ export default function DrawerComp() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/civil-engineering"
                   className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
                 >
                   Civil Engineering
@@ -72,7 +72,7 @@ export default function DrawerComp() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/road-and-commercial-construction"
                   className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
                 >
                   Road & Commercial Construction

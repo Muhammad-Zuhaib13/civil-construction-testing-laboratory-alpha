@@ -12,14 +12,14 @@ import ScreenContainer from "./ScreenContainer";
 
 export default function FooterComp() {
   return (
-    <div className="dark:bg-slate-800 bg-slate-100">
+    <div className="dark:bg-slate-800 bg-[#e1dddd]">
       <ScreenContainer>
         <Footer
           container
           className="dark:bg-inherit bg-inherit rounded-none shadow-none"
         >
           <div className="w-full">
-            <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
+            <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-[20px]">
               <div className="md:block hidden">
                 <img
                   src="/assets/icons/Logo-CCTL.png"
@@ -27,27 +27,28 @@ export default function FooterComp() {
                   alt="Flowbite Logo"
                 />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:mt-4 md:grid-cols-3 sm:gap-6">
-                <div>
-                  <Footer.Title title="about" />
-                  <Footer.LinkGroup col>
-                    <Footer.Link href="/">Home</Footer.Link>
-                  </Footer.LinkGroup>
-                </div>
-                <div>
-                  <Footer.Title title="Follow us" />
-                  <Footer.LinkGroup col>
-                    <Footer.Link href="/">Home</Footer.Link>
-                    {/* <Footer.Link href="/">Home</Footer.Link> */}
-                  </Footer.LinkGroup>
-                </div>
-                <div>
-                  <Footer.Title title="Legal" />
-                  <Footer.LinkGroup col>
-                    <Footer.Link href="/">Privacy Policy</Footer.Link>
-                    <Footer.Link href="/">Terms &amp; Conditions</Footer.Link>
-                  </Footer.LinkGroup>
-                </div>
+              <div className="flex flex-col gap-[16px]">
+                <h4 className="sub-heading dark:text-white">Office Address</h4>
+                <p className="navbar dark:text-white">
+                  Near Madina colony Airport<br/> Road Skardu
+                </p>
+              </div>
+              <div className="flex flex-col gap-[16px]">
+                <h4 className="sub-heading dark:text-white">Contact</h4>
+                <p className="navbar dark:text-white">
+                  <span>Whatsapp: </span>
+                  <span>0347-9008870</span>
+                </p>
+                <p className="navbar dark:text-white">
+                  <span>Mobile: </span>
+                  <span>0346-9163661</span>
+                </p>
+              </div>
+              <div className="flex flex-col gap-[16px]">
+                <h4 className="sub-heading dark:text-white">Email</h4>
+                <p className="navbar dark:text-white">
+                  <span> g.abbasskd@gmail.com </span>
+                </p>
               </div>
             </div>
             <Footer.Divider />

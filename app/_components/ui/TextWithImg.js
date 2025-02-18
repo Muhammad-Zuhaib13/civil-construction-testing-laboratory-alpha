@@ -21,7 +21,7 @@ const TextWithImg = (props) => {
       <div
         className={`${classesContainer} ${
           containerPaddingY || ""
-        } flex flex-col items-start gap-[16px] sm:gap-[30px] lg:flex-row lg:gap-[60px] `}
+        } flex flex-col items-center gap-[16px] sm:gap-[30px] lg:flex-row lg:gap-[60px] `}
       >
         <div className="flex w-full max-w-full grow flex-col justify-center gap-[20px] lg:gap-[30px]">
           <div className="flex flex-col gap-[8px]">

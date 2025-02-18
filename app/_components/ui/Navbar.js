@@ -31,7 +31,7 @@ const NavbarComp = () => {
 
   return (
     <div>
-      <div className="bg-slate-100 dark:bg-slate-800 sticky left-0 right-0 top-[-1px] z-50 header">
+      <div className="bg-[#e1dddd] dark:bg-slate-800 sticky left-0 right-0 top-[-1px] z-50 header">
         <ScreenContainer>
           <nav className="flex flex-row items-center justify-between py-2.5">
             <Link
@@ -52,23 +52,31 @@ const NavbarComp = () => {
                 <li>
                   <Link
                     href="/"
-                    className="block py-2 pl-3 pr-4 md:p-0  dark:text-white text-cyan-700"
+                    className="navbar block py-2 pl-3 pr-4 md:p-0  dark:text-white text-cyan-700"
                   >
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
+                    href="/about"
+                    className="navbar block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
                   >
                     About
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
+                    href="/contact"
+                    className="navbar block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/careers"
+                    className="navbar block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
                   >
                     Careers
                   </Link>
@@ -78,43 +86,43 @@ const NavbarComp = () => {
                     className="py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700 flex flex-row gap-1"
                     onClick={toggleDropdown}
                   >
-                    <span>Services</span>
+                    <span className="navbar">Services</span>
                     <ExpandMoreIcon />
                   </span>
                   <ul
                     ref={dropdownMenuRef}
-                    className={`absolute right-0 bg-white w-[210px] p-2 rounded-sm shadow-sm transition-all duration-300 ease-in-out ${
+                    className={`absolute right-0 bg-white w-[210px] p-2 rounded-sm shadow-sm transition-all duration-300 ease-in-out flex flex-col ${
                       isOpen ? "block" : "hidden"
                     }`}
                   >
                     <li>
                       <Link
-                        href="/"
-                        className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                        href="/material-and-lab-testing-services"
+                        className="navbar block py-2 px-3  dark:text-white text-cyan-700"
                       >
                         Material & Lab Testing Services
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/"
-                        className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                        href="/mix-design"
+                        className="navbar block py-2 px-3  dark:text-white text-cyan-700"
                       >
                         Mix Design
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/"
-                        className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                        href="/civil-engineering"
+                        className="navbar block py-2 px-3  dark:text-white text-cyan-700"
                       >
                         Civil Engineering
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/"
-                        className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
+                        href="/road-and-commercial-construction"
+                        className="navbar block py-2 px-3  dark:text-white text-cyan-700"
                       >
                         Road & Commercial Construction
                       </Link>

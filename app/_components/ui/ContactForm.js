@@ -29,7 +29,7 @@ const ContactForm = () => {
           <div className="flex flex-col gap-[8px]">
             <h2 className="mainHeading dark:text-white">Get in touch</h2>
             <h4 className="sub-heading dark:text-white">Contact</h4>
-            <Button pill className="!w-[250px]">
+            <Button pill className="!w-[250px] bg-[#FB6542] dark:bg-[#FB6542]">
               Call Now
             </Button>
           </div>
@@ -171,7 +171,7 @@ const ContactForm = () => {
                   </div>
 
                   {/* Submit Button */}
-                  <Button type="submit">Submit</Button>
+                  <Button type="submit" className="bg-[#FB6542] dark:bg-[#FB6542]">Submit</Button>
                 </Form>
               )}
             </Formik>

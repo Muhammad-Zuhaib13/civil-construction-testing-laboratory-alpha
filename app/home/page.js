@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ContactForm, ParasWithList, TextWithImg } from "../_components/ui";
 import { list } from "postcss";
 
-export default function Home() {
+export default function HomePage() {
   const textWithImgData = {
     subTItleTop: "Civil Engineering Projects",
     title: "CCT LABS USES ADVANCED TECHNIQUES TO PROVIDE ACCURATE RESULTS.",
@@ -30,8 +30,8 @@ export default function Home() {
   return (
     <>
       <TextWithImg data={textWithImgData} />
-      <ParasWithList data={parasWithListData}  />
-      <ContactForm />
+      {/* <ParasWithList data={parasWithListData}  />
+      <ContactForm /> */}
     </>
   );
 }
