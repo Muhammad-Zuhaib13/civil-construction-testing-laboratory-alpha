@@ -32,8 +32,8 @@ export default function MixDesignPage() {
   return (
     <>
       <TextWithImg data={textWithImgData} />
-      <ParasWithList data={parasWithListData} />
       <div className="bg-[#FDF6F6] dark:bg-slate-400">
+        <ParasWithList data={parasWithListData} />
         <ContactForm />
       </div>
     </>

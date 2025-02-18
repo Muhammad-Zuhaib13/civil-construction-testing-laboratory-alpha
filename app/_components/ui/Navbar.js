@@ -99,6 +99,7 @@ const NavbarComp = () => {
                       <Link
                         href="/material-and-lab-testing-services"
                         className="navbar block py-2 px-3  dark:text-white text-cyan-700"
+                        onClick={toggleDropdown}
                       >
                         Material & Lab Testing Services
                       </Link>
@@ -107,6 +108,7 @@ const NavbarComp = () => {
                       <Link
                         href="/mix-design"
                         className="navbar block py-2 px-3  dark:text-white text-cyan-700"
+                        onClick={toggleDropdown}
                       >
                         Mix Design
                       </Link>
@@ -115,6 +117,7 @@ const NavbarComp = () => {
                       <Link
                         href="/civil-engineering"
                         className="navbar block py-2 px-3  dark:text-white text-cyan-700"
+                        onClick={toggleDropdown}
                       >
                         Civil Engineering
                       </Link>
@@ -123,6 +126,7 @@ const NavbarComp = () => {
                       <Link
                         href="/road-and-commercial-construction"
                         className="navbar block py-2 px-3  dark:text-white text-cyan-700"
+                        onClick={toggleDropdown}
                       >
                         Road & Commercial Construction
                       </Link>
