@@ -17,7 +17,7 @@ export default function DrawerComp() {
           <MenuOpenIcon />
         </Button>
       </div>
-      <Drawer open={isOpen} onClose={handleClose} className="!bg-slate-400">
+      <Drawer open={isOpen} onClose={handleClose} className="bg-[#FDF6F6] dark:bg-slate-800 ">
         <ScreenContainer>
           <Drawer.Header title="" titleIcon={() => <></>} />
           <Drawer.Items>
@@ -59,7 +59,7 @@ export default function DrawerComp() {
               </li>
               <li>
                 <Link
-                  href="/material-and-lab-testing"
+                  href="/material-and-lab-testing-services"
                   className="block py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700"
                   onClick={handleClose}
                 >
