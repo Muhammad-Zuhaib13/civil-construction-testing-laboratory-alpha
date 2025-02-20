@@ -35,7 +35,7 @@ const NavbarComp = () => {
         <ScreenContainer>
           <nav className="flex flex-row items-center justify-between py-2.5">
             <Link
-              className="mr-3 flex justify-center items-center  shrink-0"
+              className="mr-3 flex justify-center items-center  shrink-0 gap-[6px]"
               href="/"
             >
               <img
@@ -73,15 +73,7 @@ const NavbarComp = () => {
                     Contact Us
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/careers"
-                    className="navbar block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
-                  >
-                    Careers
-                  </Link>
-                </li>
-                <li ref={dropdownContainerRef} className="relative">
+                <li ref={dropdownContainerRef} className="relative cursor-pointer">
                   <span
                     className="py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700 flex flex-row gap-1"
                     onClick={toggleDropdown}
@@ -132,6 +124,14 @@ const NavbarComp = () => {
                       </Link>
                     </li>
                   </ul>
+                </li>
+                <li>
+                  <Link
+                    href="/careers"
+                    className="navbar block py-2 pl-3 pr-4 md:p-0   dark:text-white text-cyan-700"
+                  >
+                    Careers
+                  </Link>
                 </li>
               </ul>
               <Flowbite>

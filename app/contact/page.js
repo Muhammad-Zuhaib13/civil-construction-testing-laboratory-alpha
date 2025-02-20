@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ContactForm, Heading, TextWithImg } from "../_components/ui";
+import { ContactForm, Heading, TextWithImg , Banner} from "../_components/ui";
 
 export default function ContactPage() {
   const textWithImgData = {
@@ -17,9 +17,15 @@ export default function ContactPage() {
   const heading = {
     title: "We are the Michigan Engineering, Construction and Testing Experts.",
   };
+  const banner = {
+    title: "Contact Us",
+    img: "/assets/images/contact.jpg",
+    para:'',
+  };
   return (
     <>
-      <TextWithImg data={textWithImgData} />
+    <Banner data={banner} />
+       <TextWithImg data={textWithImgData} />
       <Heading data={heading} />
       <div className="bg-[#FDF6F6] dark:bg-slate-400">
         <ContactForm />

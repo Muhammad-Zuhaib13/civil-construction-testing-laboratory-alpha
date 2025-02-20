@@ -5,6 +5,7 @@ import FooterComp  from "./Footer";
 import ParasWithList from "./ParasWithList";
 import ContactForm from "./ContactForm";
 import Heading from "./Heading";
+import Banner from "./Banner";
 export {
     ScreenContainer,
     NavbarComp,
@@ -13,4 +14,5 @@ export {
     ParasWithList,
     ContactForm,
     Heading,
+    Banner,
 }

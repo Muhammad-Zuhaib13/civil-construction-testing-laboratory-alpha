@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ContactForm, ParasWithList, TextWithImg } from "../_components/ui";
+import { ContactForm, ParasWithList, TextWithImg , Banner} from "../_components/ui";
 import { list } from "postcss";
 
 export default function MaterialandLabTestingServicesPage() {
@@ -22,8 +22,15 @@ export default function MaterialandLabTestingServicesPage() {
     ],
     list: [],
   };
+  const banner = {
+    title: "Material & Lab Testing Services",
+    img: "/assets/images/material-lab-testing.jpg",
+    para:'',
+  };
+
   return (
     <>
+    <Banner data={banner} />
       <TextWithImg data={textWithImgData} />
       <div className="bg-[#FDF6F6] dark:bg-slate-400">
         <ParasWithList data={parasWithListData} />

@@ -74,8 +74,12 @@ body {
   line-height: var(--contentLineHeight);
   font-weight: 400;
 }
-.navbar{
+.navbar {
   font-size: var(--navbarFontSize);
   line-height: var(--navbarLineHeight);
   font-weight: 400;
+}
+.gradient-banner {
+  background: rgb(52,52,52);
+  background: linear-gradient(0deg, rgba(52,52,52,1) 0%, rgba(64,64,64,0) 22%, rgba(0,212,255,0.11876552378764005) 70%);
 }

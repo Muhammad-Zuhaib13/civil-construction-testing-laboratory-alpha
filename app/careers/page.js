@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ContactForm, ParasWithList, TextWithImg } from "../_components/ui";
+import { ContactForm, ParasWithList, TextWithImg, Banner } from "../_components/ui";
 
 
 
@@ -15,9 +15,14 @@ export default function CareersPage() {
       alt: "Scenic view of Oman",
     },
   };
-  
+  const banner = {
+    title: "Careers",
+    img: "/assets/images/careers.jpg",
+    para:'',
+  };
   return (
     <>
+      <Banner data={banner} />
       <TextWithImg data={textWithImgData} />
     </>
   );

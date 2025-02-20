@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ContactForm, ParasWithList, TextWithImg } from "../_components/ui";
+import { ContactForm, ParasWithList, TextWithImg, Banner } from "../_components/ui";
 import { list } from "postcss";
 
 export default function CivilEngineeringPage() {
@@ -11,13 +11,18 @@ export default function CivilEngineeringPage() {
     "At CCT, we maintain a staff of experienced personnel and calibrated equipment to provide the most accurate results that our civil engineering clients trust and depend on. Our Testing experts have decades of experience and are certified in a number of testing methods and have certifications from many regulatory agencies. Including the American Society of Testing and Materials (ASTM). By using state-of-the-art equipment and advanced techniques, we provide exacting solutions for a wide range of civil engineering applications."
     ],
     img: {
-      src: "/assets/images/home-comp-txt-img.jpg",
-      alt: "Scenic view of Oman",
+      src: "/assets/images/civil-engineering.jpg",
+      alt: "Civil Engineering",
     },
   };
- 
+  const banner = {
+    title: "Civil Engineering",
+    img: "/assets/images/civil-engineering.jpg",
+    para:'',
+  };
   return (
     <>
+    <Banner data={banner} />
       <TextWithImg data={textWithImgData} />
     </>
   );

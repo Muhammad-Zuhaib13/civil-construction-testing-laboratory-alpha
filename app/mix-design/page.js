@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ContactForm, ParasWithList, TextWithImg } from "../_components/ui";
+import { ContactForm, ParasWithList, TextWithImg , Banner} from "../_components/ui";
 import { list } from "postcss";
 
 export default function MixDesignPage() {
@@ -29,8 +29,14 @@ export default function MixDesignPage() {
       "Quality Control Plan",
     ],
   };
+  const banner = {
+    title: "Mix Design",
+    img: "/assets/images/mix-design.jpg",
+    para:'',
+  };
   return (
     <>
+    <Banner data={banner} />
       <TextWithImg data={textWithImgData} />
       <div className="bg-[#FDF6F6] dark:bg-slate-400">
         <ParasWithList data={parasWithListData} />

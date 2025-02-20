@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ContactForm, TextWithImg, Heading } from "../_components/ui";
+import { ContactForm, TextWithImg, Heading , Banner} from "../_components/ui";
 
 export default function RoadandCommercialConstructionPage() {
   const textWithImgDataOne = {
@@ -36,9 +36,14 @@ export default function RoadandCommercialConstructionPage() {
       "Be sure to talk to us about your specific performance goals before you begin your next project.",
     ],
   };
-
+  const banner = {
+    title: "Road & Commercial Construction",
+    img: "/assets/images/commercial-construction-a.jpg",
+    para:'',
+  };
   return (
     <>
+    <Banner data={banner} />
       <TextWithImg data={textWithImgDataOne} />
       <div className="bg-[#FDF6F6] dark:bg-slate-400">
       <TextWithImg data={textWithImgDataTwo} />

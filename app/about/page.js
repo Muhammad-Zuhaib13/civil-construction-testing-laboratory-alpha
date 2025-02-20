@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ContactForm, Heading, TextWithImg } from "../_components/ui";
+import { ContactForm, Heading, TextWithImg, Banner } from "../_components/ui";
 
 
 export default function AboutPage() {
@@ -11,14 +11,20 @@ export default function AboutPage() {
     ],
     img: {
       src: "/assets/images/home-comp-txt-img.jpg",
-      alt: "Scenic view of Oman",
+      alt: "About",
     },
   };
   const heading={
     title:'We are the Michigan Engineering, Construction and Testing Experts.'
   }
+  const banner = {
+    title: "About Civil Construction Testing Laboratory",
+    img: "/assets/images/about.jpg",
+    para:'',
+  };
   return (
     <>
+    <Banner  data={banner} />
       <TextWithImg data={textWithImgData} />
       <Heading data={heading} />
       <div className="bg-[#FDF6F6] dark:bg-slate-400">
