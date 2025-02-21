@@ -36,17 +36,17 @@ const ParasWithList = (props) => {
             ) : null}
           </div>
           {list ? (
-            <List className="flex flex-col sm:gap-[20px] gap-[16px] list-disc">
-              {list.map((item, index) => (
-                <List.Item key={index}>
-                  <Fade direction="left" delay={index * 100} >
+            <Fade direction="left">
+              <List className="flex flex-col sm:gap-[20px] gap-[16px] list-disc">
+                {list.map((item, index) => (
+                  <List.Item key={index}>
                     <span className="paragraph text-black dark:text-white">
                       {item}
                     </span>
-                  </Fade>
-                </List.Item>
-              ))}
-            </List>
+                  </List.Item>
+                ))}
+              </List>
+            </Fade>
           ) : null}
         </div>
       </ScreenContainer>
