@@ -5,7 +5,7 @@ import { Button, Checkbox, Label, TextInput, Textarea } from "flowbite-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Fade } from "react-awesome-reveal";
 import * as Yup from "yup";
-const ContactForm = () => {
+const ContactForm = (props) => {
   const validationSchema = Yup.object().shape({
     firstName: Yup.string()
       .matches(/^[A-Za-z]+$/, "Only alphabets are allowed")
@@ -22,20 +22,22 @@ const ContactForm = () => {
       .required("Message is required"),
     agree: Yup.boolean().oneOf([true], "You must agree to continue"),
   });
+  const { data } = props;
+  const { title, subTItleTop, btnLabel, para, isShowBg } = data;
 
   return (
-    <div className="py-[40px] sm:py-[60px] lg:py-[80px]">
+    <div className={`py-[40px] sm:py-[60px] lg:py-[80px] ${isShowBg ? 'bg-[#FDF6F6] dark:bg-slate-400':''}`}>
       <Fade direction="up" cascade={true} triggerOnce={true} delay={100}>
         <ScreenContainer>
           <div className="grid md:grid-cols-2 grid-cols-1 items-start gap-[16px] sm:gap-[30px] lg:flex-row lg:gap-[60px]">
             <div className="flex flex-col gap-[8px]">
-              <h2 className="mainHeading dark:text-white">Get in touch</h2>
-              <h4 className="sub-heading dark:text-white">Contact</h4>
+              <h2 className="mainHeading dark:text-white">{title}</h2>
+              <h4 className="sub-heading dark:text-white">{subTItleTop}</h4>
               <Button
                 pill
                 className="!w-[250px] bg-[#FB6542] dark:bg-[#FB6542]"
               >
-                Call Now
+                {btnLabel}
               </Button>
             </div>
             <div className="">
@@ -56,10 +58,7 @@ const ContactForm = () => {
               >
                 {({ handleChange, handleBlur, values }) => (
                   <Form className="flex max-w-md flex-col gap-4">
-                    <div className="sub-heading dark:text-white">
-                      Or simply submit your request on the form below. We’ll
-                      respond promptly.
-                    </div>
+                    <p className="sub-heading dark:text-white">{para}</p>
 
                     {/* First Name */}
                     <div>

@@ -1,47 +1,26 @@
-import Image from "next/image";
 import { ContactForm, ParasWithList, TextWithImg , Banner} from "../_components/ui";
-import { list } from "postcss";
+import { mixDesing } from "@/app/_utils/content";
 
+const {seo, data} = mixDesing;
 export default function MixDesignPage() {
-  const textWithImgData = {
-    subTItleTop: "Quality Concrete Mix Design",
-    title: "more to the mix.",
-    paras: [
-      "CCT experience testing pavement Mix designs can ensure that your concrete, asphalt and aggregate mix will achieve the performance and durability goals you have for both your standard and special projects. Pavement mix-designs and density control always have an effect on quality pavement performance. Your CCT professionals have all of the technical certifications to ensure that your concrete projects achieve the best possible results.",
-      "For asphalt mixtures, density is one of the most important measurements. A proper mixture will contain enough air voids to prevent rutting due to plastic flow but low enough air voids to prevent permeability of air and water. Verification of the proper mix to match your desired materials performance is a big reason to perform testing.",
-    ],
-    img: {
-      src: "/assets/images/home-comp-txt-img.jpg",
-      alt: "Scenic view of Oman",
-    },
-  };
-  const parasWithListData = {
-    subTItleTop: "",
-    title: "",
-    paras: [
-      "Our Construction Consulting & Testing technicians hold the MCPA Level I & II Concrete Certifications as well as the ACI Concrete Certification. Our services encompass both intensive field and laboratory testing and include:",
-    ],
-    list: [
-      "Compressive Strength of Concrete Cylinders and Cores",
-      "Flexural Strength of Concrete Beams",
-      "Concrete Mix Designs and Trial Batch",
-      "Chloride-ion Permeability",
-      "Quality Control Plan",
-    ],
-  };
-  const banner = {
-    title: "Mix Design",
-    img: "/assets/images/mix-design.jpg",
-    para:'',
-  };
+
   return (
     <>
-    <Banner data={banner} />
-      <TextWithImg data={textWithImgData} />
-      <div className="bg-[#FDF6F6] dark:bg-slate-400">
-        <ParasWithList data={parasWithListData} />
-        <ContactForm />
-      </div>
+       {data.map((component, index) => {
+        const { key, pageContent } = component;
+        switch (key) {
+          case "banner":
+            return <Banner key={index} data={pageContent} />;
+          case "textWithImage":
+            return <TextWithImg key={index} data={pageContent} />;
+          case "parasWithPoints":
+            return  <ParasWithList key={index} data={pageContent} />;
+          case "contactForm":
+            return <ContactForm key={index} data={pageContent} />;
+          default:
+            return null;
+        }
+      })}
     </>
   );
 }

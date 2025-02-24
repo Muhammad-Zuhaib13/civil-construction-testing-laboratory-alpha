@@ -5,9 +5,9 @@ import { List } from "flowbite-react";
 import { Fade } from "react-awesome-reveal";
 const ParasWithList = (props) => {
   const { data } = props;
-  const { title, paras, list, subTItleTop } = data;
+  const { title, paras, list, subTItleTop, isShowBg } = data;
   return (
-    <div className="py-[40px] sm:py-[60px] lg:py-[80px]">
+    <div className={`py-[40px] sm:py-[60px] lg:py-[80px] ${isShowBg ? 'bg-[#FDF6F6] dark:bg-slate-400':''}`}>
       <ScreenContainer>
         <div className="flex flex-col items-start gap-[16px] sm:gap-[30px]  lg:gap-[60px]">
           <div className="flex w-full max-w-full grow flex-col justify-center gap-[20px] lg:gap-[30px]">

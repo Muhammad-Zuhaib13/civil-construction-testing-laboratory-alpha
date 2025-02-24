@@ -11,10 +11,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Civil Contruction Testing Laboratory",
-  description: "Civil Contruction Testing Laboratory",
-};
 
 export default function RootLayout({ children }) {
   return (
