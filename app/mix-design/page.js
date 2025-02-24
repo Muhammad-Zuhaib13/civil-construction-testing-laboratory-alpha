@@ -1,22 +1,29 @@
-import { ContactForm, ParasWithList, TextWithImg , Banner} from "../_components/ui";
+import {
+  ContactForm,
+  Heading,
+  TextWithImg,
+  Banner,
+  ParasWithList,
+} from "../_components/ui";
 import { mixDesing } from "@/app/_utils/content";
 
-const {seo, data} = mixDesing;
+const { seo, data } = mixDesing;
 export default function MixDesignPage() {
-
   return (
     <>
-       {data.map((component, index) => {
+      {data.map((component, index) => {
         const { key, pageContent } = component;
         switch (key) {
           case "banner":
             return <Banner key={index} data={pageContent} />;
           case "textWithImage":
             return <TextWithImg key={index} data={pageContent} />;
-          case "parasWithPoints":
-            return  <ParasWithList key={index} data={pageContent} />;
+          case "heading":
+            return <Heading key={index} data={pageContent} />;
           case "contactForm":
             return <ContactForm key={index} data={pageContent} />;
+          case "parasWithPoints":
+            return <ParasWithList key={index} data={pageContent} />;
           default:
             return null;
         }

@@ -1,6 +1,9 @@
 import {
+  ContactForm,
+  Heading,
   TextWithImg,
   Banner,
+  ParasWithList,
 } from "../_components/ui";
 import { home } from "@/app/_utils/content";
 
@@ -27,6 +30,12 @@ export default function HomePage() {
             return <Banner key={index} data={pageContent} />;
           case "textWithImage":
             return <TextWithImg key={index} data={pageContent} />;
+          case "heading":
+            return <Heading key={index} data={pageContent} />;
+          case "contactForm":
+            return <ContactForm key={index} data={pageContent} />;
+          case "parasWithPoints":
+            return <ParasWithList key={index} data={pageContent} />;
           default:
             return null;
         }

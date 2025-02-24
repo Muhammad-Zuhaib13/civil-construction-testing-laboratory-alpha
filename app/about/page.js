@@ -1,9 +1,14 @@
 import { about } from "@/app/_utils/content";
-import { ContactForm, Heading, TextWithImg, Banner, ParasWithList } from "../_components/ui";
+import {
+  ContactForm,
+  Heading,
+  TextWithImg,
+  Banner,
+  ParasWithList,
+} from "../_components/ui";
 
 const { seo, data } = about;
 export default function AboutPage() {
-
   return (
     <>
       {data.map((component, index) => {
@@ -18,7 +23,7 @@ export default function AboutPage() {
           case "contactForm":
             return <ContactForm key={index} data={pageContent} />;
           case "parasWithPoints":
-              return <ParasWithList key={index} data={pageContent} />;
+            return <ParasWithList key={index} data={pageContent} />;
           default:
             return null;
         }

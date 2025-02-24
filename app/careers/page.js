@@ -1,15 +1,15 @@
 import Image from "next/image";
 import {
   ContactForm,
-  ParasWithList,
+  Heading,
   TextWithImg,
   Banner,
+  ParasWithList,
 } from "../_components/ui";
 import { careers } from "@/app/_utils/content";
 
 const { seo, data } = careers;
 export default function CareersPage() {
- 
   return (
     <>
       {data.map((component, index) => {
@@ -19,6 +19,12 @@ export default function CareersPage() {
             return <Banner key={index} data={pageContent} />;
           case "textWithImage":
             return <TextWithImg key={index} data={pageContent} />;
+          case "heading":
+            return <Heading key={index} data={pageContent} />;
+          case "contactForm":
+            return <ContactForm key={index} data={pageContent} />;
+          case "parasWithPoints":
+            return <ParasWithList key={index} data={pageContent} />;
           default:
             return null;
         }
