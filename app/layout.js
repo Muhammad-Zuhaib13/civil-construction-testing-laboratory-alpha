@@ -5,12 +5,23 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
+import { home } from "@/app/_utils/content";
+const { seo } = home;
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
+export const metadata = {
+  title: seo?.title,
+  description: seo?.description,
+  keywords: seo?.keywords,
+  robots: seo?.metaRobots,
+  viewport: seo?.metaViewport,
+  alternates: {
+    canonical: seo?.canonicalURL,
+  },
+  openGraph: seo?.openGraph,
+};
 
 export default function RootLayout({ children }) {
   return (

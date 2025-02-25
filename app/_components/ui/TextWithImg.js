@@ -67,11 +67,11 @@ const TextWithImg = (props) => {
           </div>
           {img.src ? (
             <div className="h-[200px] w-full max-w-full overflow-hidden rounded-[6px] sm:h-[380px] lg:h-[425px] lg:max-w-[514px]">
-              <Fade direction="right">
+              <Fade direction="right" className="w-full h-full">
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-full overflow-hidden object-fill"
+                  className="w-full h-full overflow-hidden object-fill rounded-[10px]"
                 />
               </Fade>
             </div>
