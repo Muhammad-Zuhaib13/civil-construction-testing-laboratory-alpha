@@ -73,7 +73,10 @@ const NavbarComp = () => {
                     Contact Us
                   </Link>
                 </li>
-                <li ref={dropdownContainerRef} className="relative cursor-pointer">
+                <li
+                  ref={dropdownContainerRef}
+                  className="relative cursor-pointer"
+                >
                   <span
                     className="py-2 pl-3 pr-4 md:p-0 dark:text-white text-cyan-700 flex flex-row gap-1"
                     onClick={toggleDropdown}
@@ -138,7 +141,10 @@ const NavbarComp = () => {
                 <DarkThemeToggle />
               </Flowbite>
             </div>
-            <div className="md:hidden block">
+            <div className="md:hidden  flex gap-[6px]">
+              <Flowbite>
+                <DarkThemeToggle className="!bg-transparent dark:!bg-transparent !border-none focus:!ring-0 dark:focus:!ring-0" />
+              </Flowbite>
               <DrawerComp />
             </div>
           </nav>
