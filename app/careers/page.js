@@ -1,11 +1,5 @@
 import Image from "next/image";
-import {
-  ContactForm,
-  Heading,
-  TextWithImg,
-  Banner,
-  ParasWithList,
-} from "../_components/ui";
+import { PageContent } from "../_components/ui";
 import { careers } from "@/app/_utils/content";
 
 const { seo, data } = careers;
@@ -21,25 +15,5 @@ export const metadata = {
   openGraph: seo?.openGraph,
 };
 export default function CareersPage() {
-  return (
-    <>
-      {data.map((component, index) => {
-        const { key, pageContent } = component;
-        switch (key) {
-          case "banner":
-            return <Banner key={index} data={pageContent} />;
-          case "textWithImage":
-            return <TextWithImg key={index} data={pageContent} />;
-          case "heading":
-            return <Heading key={index} data={pageContent} />;
-          case "contactForm":
-            return <ContactForm key={index} data={pageContent} />;
-          case "parasWithPoints":
-            return <ParasWithList key={index} data={pageContent} />;
-          default:
-            return null;
-        }
-      })}
-    </>
-  );
+  return <>{<PageContent data={data} />}</>;
 }

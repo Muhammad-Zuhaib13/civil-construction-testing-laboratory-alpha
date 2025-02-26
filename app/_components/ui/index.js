@@ -7,6 +7,7 @@ import ContactForm from "./ContactForm";
 import Heading from "./Heading";
 import Banner from "./Banner";
 import GoogleAnalaytics from "./GoogleAnalaytics";
+import PageContent from "./PageContent";
 export {
     ScreenContainer,
     NavbarComp,
@@ -17,4 +18,5 @@ export {
     Heading,
     Banner,
     GoogleAnalaytics,
+    PageContent,
 }
