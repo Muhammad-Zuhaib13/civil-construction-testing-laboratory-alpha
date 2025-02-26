@@ -590,8 +590,8 @@ const roadandCommercialConstruction = {
       key: "textWithImage",
       pageContent: {
         classesContainer: "lg:flex-row-reverse",
-        subTItleTop: "How we help Commercial Construction (Vertical)",
-        title: "How we help Road Construction (Horizontal)",
+        subTItleTop: "",
+        title: "How we help Commercial Construction (Vertical)",
         paras: [
           "Vertical construction projects and infrastructure have very specialized needs and require a higher level of collaboration with the architectural and engineering teams. Planning, land acquisition, site development, soils and foundations, design, engineering, construction and building safety all require critical and exacting testing design, capabilities and support. This is where the engineering experience of CCTL  makes the difference. Both soil and foundation density and strength testing play critical rolls, as does testing for construction materials, and engineered fills. Exacting tests must be designed and conducted to evaluate the suitability of fill placement and compaction, in concert with comprehensive load testing.",
           "Depending upon the design and engineering specifications for your project, Construction testing may include:",

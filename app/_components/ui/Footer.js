@@ -41,7 +41,7 @@ export default function FooterComp() {
                 </p>
                 <p className="navbar dark:text-white">
                   <span>Mobile: </span>
-                  <span>0346-9163661</span>
+                  <span>0312-9047134</span>
                 </p>
               </div>
               <div className="flex flex-col gap-[16px]">
