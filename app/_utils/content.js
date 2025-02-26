@@ -581,7 +581,7 @@ const roadandCommercialConstruction = {
           "CCTL have deep experience in Road, Building, Bridge and Highway Construction projects. Founder Mr. Gulam Abbas has dedicated over 19 years of his career to inspecting, managing and surveying construction projects all across Pakistan. CCTL has been regularly engaged in reviewing and assessing the condition of Road, Building, Bridge and Highway Construction projects and infrastructure across the country.",
         ],
         img: {
-          src: "/assets/images/home-comp-txt-img.jpg",
+          src: "/assets/images/road-and-com-img-two.jpg",
           alt: "Scenic view of Oman",
         },
       },
@@ -597,7 +597,7 @@ const roadandCommercialConstruction = {
           "Depending upon the design and engineering specifications for your project, Construction testing may include:",
         ],
         img: {
-          src: "/assets/images/home-comp-txt-img.jpg",
+          src: "/assets/images/road-and-com-img-one.jpg",
           alt: "Scenic view of Oman",
         },
         list: [
