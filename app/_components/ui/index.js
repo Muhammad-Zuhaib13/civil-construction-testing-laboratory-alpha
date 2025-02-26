@@ -6,6 +6,7 @@ import ParasWithList from "./ParasWithList";
 import ContactForm from "./ContactForm";
 import Heading from "./Heading";
 import Banner from "./Banner";
+import GoogleAnalaytics from "./GoogleAnalaytics";
 export {
     ScreenContainer,
     NavbarComp,
@@ -15,4 +16,5 @@ export {
     ContactForm,
     Heading,
     Banner,
+    GoogleAnalaytics,
 }
