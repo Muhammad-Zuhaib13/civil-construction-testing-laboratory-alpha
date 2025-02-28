@@ -5,6 +5,7 @@ import ScreenContainer from "./ScreenContainer";
 import Link from "next/link";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import DrawerComp from "./DrawerComp";
+import Image from "next/image";
 const NavbarComp = () => {
   const dropdownContainerRef = useRef(null); // Reference for the dropdown container (li)
   const dropdownMenuRef = useRef(null); // Reference for the dropdown menu (ul)
@@ -38,10 +39,13 @@ const NavbarComp = () => {
               className="mr-3 flex justify-center items-center  shrink-0 gap-[6px]"
               href="/"
             >
-              <img
+             
+              <Image
                 src="/assets/icons/Logo-CCTL.png"
-                className="h-[75px] w-[80px]"
+                className="h-[75px] w-[80px] object-fill"
                 alt="Flowbite Logo"
+                width={75}
+                height={80}
               />
               <span className="self-center sub-heading font-semibold dark:text-white lg:block hidden">
                 Civil Construction Testing Laboratory

@@ -9,7 +9,7 @@ import {
   BsTwitter,
 } from "react-icons/bs";
 import ScreenContainer from "./ScreenContainer";
-
+import Image from "next/image";
 export default function FooterComp() {
   return (
     <div className="dark:bg-slate-800 bg-[#e1dddd]">
@@ -21,16 +21,20 @@ export default function FooterComp() {
           <div className="w-full">
             <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-[20px]">
               <div className="md:block hidden">
-                <img
-                  src="/assets/icons/Logo-CCTL.png"
-                  className="mr-3 h-[75px] w-[80px]"
-                  alt="Flowbite Logo"
-                />
+                <div className="mr-3 h-[75px] w-[80px] relative">
+                  <Image
+                    src="/assets/icons/Logo-CCTL.png"
+                    className="h-full w-full object-cover"
+                    fill
+                    alt="CCTL"
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-[16px]">
                 <h4 className="sub-heading dark:text-white">Office Address</h4>
                 <p className="navbar dark:text-white">
-                  Near Madina colony Airport<br/> Road Skardu
+                  Near Madina colony Airport
+                  <br /> Road Skardu
                 </p>
               </div>
               <div className="flex flex-col gap-[16px]">

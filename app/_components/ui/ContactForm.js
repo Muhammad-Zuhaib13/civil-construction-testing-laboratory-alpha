@@ -5,6 +5,8 @@ import { Button, Checkbox, Label, TextInput, Textarea } from "flowbite-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Fade } from "react-awesome-reveal";
 import * as Yup from "yup";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ContactForm = (props) => {
   const validationSchema = Yup.object().shape({
     firstName: Yup.string()
@@ -60,17 +62,17 @@ const ContactForm = (props) => {
                       },
                       body: JSON.stringify(values),
                     });
-                
+
                     const data = await response.json();
-                
+
                     if (response.ok) {
-                      alert('Email sent successfully!');
+                      toast.success("Email sent successfully!");
                       resetForm();
                     } else {
-                      alert(`Failed to send email: ${data.error}`);
+                      toast.error(`Failed to send email: ${data.error}`);
                     }
                   } catch (error) {
-                    alert('Something went wrong! Please try again later.');
+                    toast.error("Something went wrong! Please try again later.");
                   } finally {
                     setSubmitting(false);
                   }
@@ -208,6 +210,7 @@ const ContactForm = (props) => {
           </div>
         </ScreenContainer>
       </Fade>
+      <ToastContainer />
     </div>
   );
 };

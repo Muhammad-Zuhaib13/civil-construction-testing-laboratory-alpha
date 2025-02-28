@@ -1,6 +1,7 @@
 import React from "react";
 import ScreenContainer from "./ScreenContainer";
 import { Fade } from "react-awesome-reveal";
+import Image from "next/image";
 const Banner = (props) => {
   const { data } = props;
   const { title, img, para } = data;
@@ -8,12 +9,18 @@ const Banner = (props) => {
     <div className="w-full h-[400px] relative">
       <div className="gradient-banner  w-full h-full absolute top-0 left-0 z-20"></div>
       {img ? (
-        <img
+        <Image
           src={img}
-          className="w-full h-full object-cover absolute top-0 left-0 right-0 z-10"
+          fill
           alt={title || "image"}
+          className="w-full h-full object-cover absolute top-0 left-0 right-0 z-10"
         />
-      ) : null}
+      ) : // <img
+      //   src={img}
+      //   className="w-full h-full object-cover absolute top-0 left-0 right-0 z-10"
+      //   alt={title || "image"}
+      // />
+      null}
       {title ? (
         <ScreenContainer>
           <div className="flex flex-col justify-end items-start h-full w-full pb-[30px] relative z-30">

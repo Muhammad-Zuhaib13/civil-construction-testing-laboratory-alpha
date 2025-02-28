@@ -2,6 +2,7 @@ import React from "react";
 import ScreenContainer from "./ScreenContainer";
 import { List } from "flowbite-react";
 import { Fade } from "react-awesome-reveal";
+import Image from "next/image";
 const TextWithImg = (props) => {
   const { data } = props;
   const {
@@ -68,11 +69,17 @@ const TextWithImg = (props) => {
           {img.src ? (
             <div className="h-[200px] w-full max-w-full overflow-hidden rounded-[6px] sm:h-[380px] lg:h-[425px] lg:max-w-[514px]">
               <Fade direction="right" className="w-full h-full">
-                <img
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover rounded-[10px]"
+                />
+                {/* <img
                   src={img.src}
                   alt={img.alt}
                   className="w-full h-full overflow-hidden object-fill rounded-[10px]"
-                />
+                /> */}
               </Fade>
             </div>
           ) : null}
