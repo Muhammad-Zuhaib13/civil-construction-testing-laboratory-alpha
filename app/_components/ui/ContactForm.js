@@ -51,9 +51,29 @@ const ContactForm = (props) => {
                   agree: false,
                 }}
                 validationSchema={validationSchema}
-                onSubmit={(values, { resetForm }) => {
-                  console.log("Form Submitted", values);
-                  resetForm();
+                onSubmit={async (values, { resetForm, setSubmitting }) => {
+                  try {
+                    const response = await fetch('/api/send-email', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify(values),
+                    });
+                
+                    const data = await response.json();
+                
+                    if (response.ok) {
+                      alert('Email sent successfully!');
+                      resetForm();
+                    } else {
+                      alert(`Failed to send email: ${data.error}`);
+                    }
+                  } catch (error) {
+                    alert('Something went wrong! Please try again later.');
+                  } finally {
+                    setSubmitting(false);
+                  }
                 }}
               >
                 {({ handleChange, handleBlur, values }) => (
