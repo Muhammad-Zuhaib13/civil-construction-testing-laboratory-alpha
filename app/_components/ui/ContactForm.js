@@ -182,6 +182,7 @@ const ContactForm = (props) => {
                           id="agree"
                           name="agree"
                           as={Checkbox}
+                         
                         />
                         <Label htmlFor="agree">
                           I Agree to the Privacy Policy, Terms of Service, and
