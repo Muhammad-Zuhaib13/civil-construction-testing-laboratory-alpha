@@ -30,7 +30,7 @@ export async function POST(req) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "muhammadzohaib578@gmail.com",
+      to: process.env.EMAIL_USER,
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
@@ -53,8 +53,8 @@ export async function POST(req) {
               </a>
             </p>
             </div>
-       <p style="display:flex; gap:12px;font-size: 18px; margin:0;">  <span> <strong>Email:  </strong></span>
-                  <span>g.abbasskd@gmail.com</span></p>
+       <p style="display:flex; gap:12px;font-size: 18px; margin:0; flex-wrap:wrap">  <span> <strong>Email:  </strong></span>
+              <span>cctl1472@gmail.com</span> | <span>g.abbasskd@gmail.com</span></p>
           <div style="text-align:left; margin-top: 10px;">
             <img src="cid:logo"  style="width: 80px; height: 75px; border-radius: 50%; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);" alt="Company Logo">
           </div>
