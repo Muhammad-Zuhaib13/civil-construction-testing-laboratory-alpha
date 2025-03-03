@@ -62,8 +62,8 @@ export default function FooterComp() {
                 <h4 className="sub-heading dark:text-white">Email</h4>
                 <p className="navbar dark:text-white">
                   <span>
-                    <a href="mailto:g.abbasskd@gmail.com" target="_blank">
-                      g.abbasskd@gmail.com
+                    <a href="mailto:cctl1472@gmail.com" target="_blank">
+                    cctl1472@gmail.com
                     </a>
                   </span>
                 </p>

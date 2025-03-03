@@ -45,7 +45,7 @@ export async function POST(req) {
           <div style="display:grid; gap:20px">
               <p style="font-size: 16px; margin: 8px 0;">📞 <strong>Mobile:</strong> 0312-9047134</p>
               <p style="font-size: 16px; margin: 8px 0;">💬 <strong>WhatsApp:</strong> 0347-9008870</p>
-              <p style="font-size: 16px; margin: 8px 0;">📧 <strong>Email:</strong> g.abbasskd@gmail.com</p>
+              <p style="font-size: 16px; margin: 8px 0;">📧 <strong>Email:</strong>cctl1472@gmail.com</p>
                <p style="font-size: 16px; margin: 8px 0;">
               🌐 <strong>Website:</strong> 
               <a href="https://civil-construction-testing-laboratory-alpha-j1vk.vercel.app/" style="color: #007bff; text-decoration: none;">
