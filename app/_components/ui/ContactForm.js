@@ -10,10 +10,11 @@ import "react-toastify/dist/ReactToastify.css";
 const ContactForm = (props) => {
   const validationSchema = Yup.object().shape({
     firstName: Yup.string()
-      .matches(/^[A-Za-z]+$/, "Only alphabets are allowed")
+      .matches(/^[A-Za-z\s]+$/, "Only alphabets and spaces are allowed")
       .required("First name is required"),
+
     lastName: Yup.string()
-      .matches(/^[A-Za-z]+$/, "Only alphabets are allowed")
+      .matches(/^[A-Za-z\s]+$/, "Only alphabets and spaces are allowed")
       .required("Last name is required"),
     phoneNumber: Yup.string()
       .matches(/^[+]?[\d\s\-().]{6,15}$/, "Invalid phone number")
@@ -59,8 +60,7 @@ const ContactForm = (props) => {
                 validationSchema={validationSchema}
                 onSubmit={async (values, { resetForm, setSubmitting }) => {
                   try {
-                    // Send first email
-                    const response1 = await fetch("/api/send-email-thanks", {
+                    const response = await fetch("/api/send-email", {
                       method: "POST",
                       headers: {
                         "Content-Type": "application/json",
@@ -68,31 +68,13 @@ const ContactForm = (props) => {
                       body: JSON.stringify(values),
                     });
 
-                    const data1 = await response1.json();
+                    const data = await response.json();
 
-                    if (!response1.ok) {
-                      toast.error(`Failed to send email: ${data1.error}`);
-                      return;
-                    }
-
-                    // Send second email (only if the first email is successfully sent)
-                    const response2 = await fetch("/api/send-email-thanks", {
-                      method: "POST",
-                      headers: {
-                        "Content-Type": "application/json",
-                      },
-                      body: JSON.stringify(values),
-                    });
-
-                    const data2 = await response2.json();
-
-                    if (response2.ok) {
-                      toast.success("Emails sent successfully!");
+                    if (response.ok) {
+                      toast.success("Email sent successfully!");
                       resetForm();
                     } else {
-                      toast.error(
-                        `Failed to send thank-you email: ${data2.error}`
-                      );
+                      toast.error(`Failed to send email: ${data.error}`);
                     }
                   } catch (error) {
                     toast.error(
