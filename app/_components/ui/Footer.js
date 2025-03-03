@@ -46,7 +46,7 @@ export default function FooterComp() {
                 <p className="navbar dark:text-white">
                   <span>Whatsapp: </span>
                   <span>
-                    <a href="https://wa.me/923484681781">0347-9008870</a>
+                    <a href="https://wa.me/03129047134">0347-9008870</a>
                   </span>
                 </p>
                 <p className="navbar dark:text-white">
@@ -70,13 +70,13 @@ export default function FooterComp() {
             <Footer.Divider />
             <div className="w-full sm:flex sm:items-center sm:justify-between">
               <Footer.Copyright
-                href="/"
+                href="https://civil-construction-testing-laboratory-web.vercel.app/"
                 by="Civil Construction Testing Laboratory"
                 year={2025}
               />
               <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
                 <Footer.Icon
-                  href="https://wa.me/923484681781"
+                  href="https://wa.me/03129047134"
                   icon={BsWhatsapp}
                 />
                 <Footer.Icon
