@@ -28,7 +28,11 @@ const ContactForm = (props) => {
   const { title, subTItleTop, btnLabel, para, isShowBg } = data;
 
   return (
-    <div className={`py-[40px] sm:py-[60px] lg:py-[80px] ${isShowBg ? 'bg-[#FDF6F6] dark:bg-slate-400':''}`}>
+    <div
+      className={`py-[40px] sm:py-[60px] lg:py-[80px] ${
+        isShowBg ? "bg-[#FDF6F6] dark:bg-slate-400" : ""
+      }`}
+    >
       <Fade direction="up" cascade={true} triggerOnce={true} delay={100}>
         <ScreenContainer>
           <div className="grid md:grid-cols-2 grid-cols-1 items-start gap-[16px] sm:gap-[30px] lg:flex-row lg:gap-[60px]">
@@ -39,7 +43,7 @@ const ContactForm = (props) => {
                 pill
                 className="!w-[250px] bg-[#FB6542] dark:bg-[#FB6542]"
               >
-                {btnLabel}
+                <a href="tel:0312-9047134">{btnLabel}</a>
               </Button>
             </div>
             <div className="">
@@ -55,24 +59,45 @@ const ContactForm = (props) => {
                 validationSchema={validationSchema}
                 onSubmit={async (values, { resetForm, setSubmitting }) => {
                   try {
-                    const response = await fetch('/api/send-email', {
-                      method: 'POST',
+                    // Send first email
+                    const response1 = await fetch("/api/send-email-thanks", {
+                      method: "POST",
                       headers: {
-                        'Content-Type': 'application/json',
+                        "Content-Type": "application/json",
                       },
                       body: JSON.stringify(values),
                     });
 
-                    const data = await response.json();
+                    const data1 = await response1.json();
 
-                    if (response.ok) {
-                      toast.success("Email sent successfully!");
+                    if (!response1.ok) {
+                      toast.error(`Failed to send email: ${data1.error}`);
+                      return;
+                    }
+
+                    // Send second email (only if the first email is successfully sent)
+                    const response2 = await fetch("/api/send-email-thanks", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(values),
+                    });
+
+                    const data2 = await response2.json();
+
+                    if (response2.ok) {
+                      toast.success("Emails sent successfully!");
                       resetForm();
                     } else {
-                      toast.error(`Failed to send email: ${data.error}`);
+                      toast.error(
+                        `Failed to send thank-you email: ${data2.error}`
+                      );
                     }
                   } catch (error) {
-                    toast.error("Something went wrong! Please try again later.");
+                    toast.error(
+                      "Something went wrong! Please try again later."
+                    );
                   } finally {
                     setSubmitting(false);
                   }
@@ -182,11 +207,10 @@ const ContactForm = (props) => {
                           id="agree"
                           name="agree"
                           as={Checkbox}
-                         
                         />
                         <Label htmlFor="agree">
-                          I Agree to the Privacy Policy, Terms of Service, and
-                          to Receive Communications.
+                          I agree to the privacy policy, terms of service, and
+                          to receive communications.
                         </Label>
                       </div>
 

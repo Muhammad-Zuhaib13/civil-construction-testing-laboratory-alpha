@@ -6,13 +6,16 @@ import {
   BsFacebook,
   BsGithub,
   BsInstagram,
+  BsLinkedin,
+  BsTiktok,
   BsTwitter,
+  BsWhatsapp,
 } from "react-icons/bs";
 import ScreenContainer from "./ScreenContainer";
 import Image from "next/image";
 export default function FooterComp() {
   return (
-    <div className="dark:bg-slate-800 bg-[#e1dddd]">
+    <div className="dark:bg-slate-800 bg-[#e1dddd] relative z-20">
       <ScreenContainer>
         <Footer
           container
@@ -30,6 +33,7 @@ export default function FooterComp() {
                   />
                 </div>
               </div>
+
               <div className="flex flex-col gap-[16px]">
                 <h4 className="sub-heading dark:text-white">Office Address</h4>
                 <p className="navbar dark:text-white">
@@ -41,17 +45,25 @@ export default function FooterComp() {
                 <h4 className="sub-heading dark:text-white">Contact</h4>
                 <p className="navbar dark:text-white">
                   <span>Whatsapp: </span>
-                  <span>0347-9008870</span>
+                  <span>
+                    <a href="https://wa.me/923484681781">0347-9008870</a>
+                  </span>
                 </p>
                 <p className="navbar dark:text-white">
                   <span>Mobile: </span>
-                  <span>0312-9047134</span>
+                  <span>
+                    <a href="tel:0312-9047134">0312-9047134</a>
+                  </span>
                 </p>
               </div>
               <div className="flex flex-col gap-[16px]">
                 <h4 className="sub-heading dark:text-white">Email</h4>
                 <p className="navbar dark:text-white">
-                  <span> g.abbasskd@gmail.com </span>
+                  <span>
+                    <a href="mailto:g.abbasskd@gmail.com" target="_blank">
+                      g.abbasskd@gmail.com
+                    </a>
+                  </span>
                 </p>
               </div>
             </div>
@@ -63,11 +75,30 @@ export default function FooterComp() {
                 year={2025}
               />
               <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-                <Footer.Icon href="/" icon={BsFacebook} />
-                <Footer.Icon href="/" icon={BsInstagram} />
-                <Footer.Icon href="/" icon={BsTwitter} />
-                <Footer.Icon href="/" icon={BsGithub} />
-                <Footer.Icon href="/" icon={BsDribbble} />
+                <Footer.Icon
+                  href="https://wa.me/923484681781"
+                  icon={BsWhatsapp}
+                />
+                <Footer.Icon
+                  href="https://www.linkedin.com/in/ghulam-abbas-b23508225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  icon={BsLinkedin}
+                />
+                <Footer.Icon
+                  href="https://www.facebook.com/share/18SbiT2nay/"
+                  target="_blank"
+                  icon={BsFacebook}
+                />
+                <Footer.Icon
+                  href="https://www.instagram.com/abbas_skd?igsh=MXZqaHFqeXZocHZyYw=="
+                  target="_blank"
+                  icon={BsInstagram}
+                />
+                <Footer.Icon
+                  href="https://www.tiktok.com/@akbari42101?_t=ZS-8uJeSMJrFrk&_r=1"
+                  target="_blank"
+                  icon={BsTiktok}
+                />
               </div>
             </div>
           </div>
