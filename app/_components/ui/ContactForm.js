@@ -94,7 +94,7 @@ const ContactForm = (props) => {
                   }
                 }}
               >
-                {({ handleChange, handleBlur, values }) => (
+                {({ handleChange, handleBlur, values, isSubmitting }) => (
                   <Form className="flex max-w-md flex-col gap-4">
                     <p className="sub-heading dark:text-white">{para}</p>
 
@@ -216,8 +216,9 @@ const ContactForm = (props) => {
                     <Button
                       type="submit"
                       className="bg-[#FB6542] dark:bg-[#FB6542]"
+                      disabled={isSubmitting} 
                     >
-                      Submit
+                       {isSubmitting ? "Submitting..." : "Submit"}
                     </Button>
                   </Form>
                 )}
