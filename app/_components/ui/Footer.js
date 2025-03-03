@@ -72,7 +72,7 @@ export default function FooterComp() {
               <Footer.Copyright
                 href="https://civil-construction-testing-laboratory-web.vercel.app/"
                 by="Civil Construction Testing Laboratory"
-                year={2025}
+                year={new Date().getFullYear()}
               />
               <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
                 <Footer.Icon
