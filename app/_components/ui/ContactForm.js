@@ -67,14 +67,23 @@ const ContactForm = (props) => {
                       },
                       body: JSON.stringify(values),
                     });
+                    const responseSendThanks = await fetch("/api/send-email-thanks", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(values),
+                    });
 
                     const data = await response.json();
+                    const dataSendThanks = await responseSendThanks.json();
 
-                    if (response.ok) {
+                    if (response.ok && responseSendThanks.ok) {
                       toast.success("Email sent successfully!");
                       resetForm();
                     } else {
                       toast.error(`Failed to send email: ${data.error}`);
+
                     }
                   } catch (error) {
                     toast.error(
