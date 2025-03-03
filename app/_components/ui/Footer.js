@@ -25,12 +25,14 @@ export default function FooterComp() {
             <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-[20px]">
               <div className="md:block hidden">
                 <div className="mr-3 h-[75px] w-[80px] relative">
-                  <Image
-                    src="/assets/icons/Logo-CCTL.png"
-                    className="h-full w-full object-cover"
-                    fill
-                    alt="CCTL"
-                  />
+                  <a href="https://civil-construction-testing-laboratory-web.vercel.app/">
+                    <Image
+                      src="/assets/icons/Logo-CCTL.png"
+                      className="h-full w-full object-cover"
+                      fill
+                      alt="CCTL"
+                    />
+                  </a>
                 </div>
               </div>
 
